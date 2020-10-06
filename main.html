@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    
+</head>
+<body>
+    
+    <a-scene>
+        <a-assets>
+            <img id="ground" src="assets/Ground.jpg">
+            <img id="groundNorm" src="assets/GroundN.jpg">
+            <img id="piedritaBase"  src="assets/piedritaBase.jpg" >
+            <img id="piedritaNormal" src="assets/piedritaNormal.jpg" >
+          </a-assets>
+    <a-camera position="5 0.5 5"> </a-camera>
+
+    <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2; color: #ffb804"
+          position="-4 4 0"></a-entity>
+    <a-entity light="type: point; intensity: 0.75; distance: 50; decay: 2; color: #1a55ff"
+          position="4 4 0"></a-entity>      
+    <a-box material= "normalMap:#piedritaNormal; normalTextureOffset:10" src="#caja" position="0 1 0" rotation="0 0 0" ></a-box>   
+    
+    <a-plane material= "normalMap:#groundNorm; normalTextureOffset:10"  src="#ground"  width="10" height="10" rotation="-90 0 0"></a-plane>
+      
+    </a-scene>
+    
+</body>
+</html>
